@@ -1,0 +1,20 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - articles
+        - tagList
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: Жанр фильмов «{{ tag }}» – Film Stories
+layout: page.njk
+permalink: /genres/{{ tag | slug }}/
+---
+
+<main class="content container">
+    {% set articleslist = collections[tag] %}
+    {% include "cards.njk" %}
+</main>

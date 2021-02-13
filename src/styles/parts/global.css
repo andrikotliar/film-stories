@@ -1,0 +1,19 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.content {
+	min-height: 50vh;
+}
+
+.container {
+	padding: 0 200px;
+}
+
+.page-title {
+	font-size: 30px;
+	margin: 20px 0;
+	text-align: center;
+}

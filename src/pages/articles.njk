@@ -1,0 +1,11 @@
+---
+layout: page.njk
+title: Интересные статьи о кинематографе – Film Stories
+description: Библиотека статей о создании фильмов и кинематографе в целом.
+permalink: /articles/
+---
+
+<main class="content container">
+    {% set articleslist = collections.article %}
+    {% include "cards.njk" %}
+</main>

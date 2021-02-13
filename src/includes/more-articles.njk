@@ -1,0 +1,26 @@
+<div class="article__bottom">
+  <h6 class="article__bottom-title">
+    Другие {% if tags == "article" %}статьи{% else %}сюжеты{% endif %}:
+  </h6>
+  <div class="article-links">
+    {% if tags[0] == "story" %}
+      {% set articleCollection = collections.story %}
+    {% else %}
+      {% set articleCollection = collections.article %}
+    {% endif %}
+
+    {% for article in articleCollection | reverse | head(5) %}
+      {% if article.url != page.url %}
+        <a href="{{ article.url | url }}"  class="article-link">
+          <div class="article-link__cover">
+            {% set articleCover = [article.url, 'images/cover.jpg'] | join %}
+            <img src="{{articleCover}}" alt="{{ article.data.title }}">
+          </div>
+          <h5 class="article-link__title">
+            {{ article.data.title }}
+          </h5>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

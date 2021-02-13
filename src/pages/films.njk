@@ -1,0 +1,11 @@
+---
+layout: page.njk
+title: Список фильмов – Film Stories
+description: Список коротких пересказов сюжетов фильмов
+permalink: /films/
+---
+
+<main class="content container">
+    {% set articleslist = collections.story %}
+    {% include "cards.njk" %}
+</main>

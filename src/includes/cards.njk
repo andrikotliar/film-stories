@@ -1,0 +1,18 @@
+<div class="article-cards">
+    {% for article in articleslist | reverse %}
+        <div class="card">
+            <a href="{{ article.url | url }}" class="card__cover">
+                {% set articleCover = [article.url, 'images/cover.jpg'] | join %}
+                <img src="{{articleCover}}" alt="{{ article.data.title }}">
+            </a>
+            <div class="card__info">
+                <h2 class="card__title"> 
+                    <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+                </h2>
+                <a href="{{ article.url | url }}" class="card__description">
+                    {{ article.data.description }}
+                </a>            
+            </div>
+        </div>
+    {% endfor %}
+</div>
