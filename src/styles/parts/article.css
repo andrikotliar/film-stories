@@ -1,0 +1,246 @@
+/* article */
+
+.article__title {
+	font-size: 35px;
+}
+
+.article__time {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    color: #7b7b7b;
+}
+
+.article__cover {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.article__cover img {
+	width: 100%;
+}
+
+.article__body {
+	font-size: 18px;
+}
+
+.article__body img {
+	width: 100%;
+}
+
+.article__body p {
+	margin: 15px 0;
+	line-height: 1.5;
+}
+
+.article__body ul {
+	margin-left: 25px;
+}
+
+.article__body ul li {
+	list-style: disc inside;
+}
+
+.article__body ol {
+	margin-left: 25px;
+}
+
+.article__body ol li {
+	list-style: decimal inside;
+	margin-bottom: 10px;
+}
+.article__body ol li:last-child {
+	margin-bottom: 0;
+}
+
+.article__body h4 {
+	font-size: 28px;
+	margin: 20px 0 15px;
+}
+
+.article__body h5 {
+	font-size: 21px;
+	margin: 15px 0;
+}
+
+.article__body a {
+	color: #0735c1;
+}
+
+.article__body hr {
+	display: block;
+	border: none;
+	height: 1px;
+	background-color: #ddd;
+	width: 80%;
+	margin: auto;
+}
+
+.article__body figure {
+	font-size: 0;
+}
+
+.article__body figcaption,
+.article__body .gallery__caption {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	color: #171717;
+	background-color: #ddd;
+	padding: 10px;
+}
+
+.article__body .narrow-image {
+	text-align: center;
+}
+
+.article__body .narrow-image figure {
+	display: inline-block;
+}
+
+.article__body sup {
+	color: #06bb35;
+}
+
+.article__body blockquote {
+	position: relative;
+	background-color: #f2f2f2;
+	border-left: 8px solid #e2e2e2;
+	padding: 15px 30px;
+	line-height: 1.5;
+	margin-top: 25px;
+}
+
+.article__body blockquote span {
+	position: absolute;
+    top: -15px;
+    left: 30px;
+    background-color: #d0d0d0;
+    padding: 5px 10px;
+}
+
+.article__body .table-wrapper {
+	width: 100%;
+	overflow: auto;
+}
+
+.article__body table {
+	overflow-x: auto;
+}
+
+.article__body thead {
+	background-color: #ddd;
+	text-align: center;
+	font-weight: bold;
+}
+
+.article__body thead .first-col {
+	width: 20%;
+}
+
+.article__body tbody {
+	background-color: #f2f2f2;
+}
+
+.article__body .gallery {
+	margin: 20px 0;
+	padding: 0 20px;
+	background-color: #ddd;
+}
+
+.article__body .gallery__wrapper {
+	display: flex;
+	overflow-x: auto; 
+	height: 200px;
+}
+
+.article__body .gallery__link {
+	display: block;
+	flex-shrink: 0;
+	margin-right: 20px;
+}
+
+.article__body .gallery__image {
+	width: 200px;
+	height: 100%;
+	object-fit: cover;
+}
+
+.article__body td {
+	padding: 5px 15px;
+	border: 1px solid #000;
+}
+
+.article__body .m-text {
+	font-family: 'RobotoMono', monospace;
+	font-size: 1rem;
+	padding: 20px;
+	margin: 0 -15px;
+	background-color: #fffde7;
+	border-radius: 10px;
+	
+}
+
+.article__body .m-text p:first-child {
+	margin-top: 0;
+}
+
+.article__body .m-text p:last-child {
+	margin-bottom: 0;
+}
+
+.article__body .bottom-text {
+	font-size: 14px;
+	color: #777;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.article__body .bottom-text p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.article__body .bottom-text a {
+	word-break: break-all;
+}
+
+.article__body .bottom-text a:hover {
+	text-decoration: underline;
+}
+
+.article__body .continue {
+	color: #0097a7;
+	margin-bottom: 20px;
+}
+
+.article__body .continue:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;    
+    animation: ellipsis steps(4, end) 2s infinite;
+    content: "\2026"; 
+    width: 0px;
+}
+
+.article__bottom {
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+}
+
+.article__bottom-title {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+@keyframes ellipsis {
+	to {
+		width: 15px;    
+	}
+}
+
+@media (max-width: 550px) {
+	.article__body .gallery {
+		padding-bottom: 20px;
+	}
+}
