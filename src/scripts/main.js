@@ -9,4 +9,11 @@ function activeMenuLink() {
 	});
 }
 
+function currentYear() {
+	const yearElem = document.querySelector('.year');
+	const year = new Date().getFullYear();
+	yearElem.textContent = year;
+}
+
 activeMenuLink();
+currentYear();
