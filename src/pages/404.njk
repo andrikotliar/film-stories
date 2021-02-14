@@ -6,8 +6,12 @@ eleventyExcludeFromCollections: true
 
 <main class="content container">
     <div class="error-page">
-        <h1 class="error-page__title">404</h1>
-        <p class="error-page__text">Увы, такой страницы нет, посмотрите другие</p>
-        <a href="/">На главную</a>
+        <div class="error-page__status">
+            <span class="number">4</span>
+            <img src="/images/icons/404.png" alt="Кинопленка" class="error-page__image">
+            <span class="number">4</span>
+        </div>
+        <p class="error-page__text">Страница не существует или находиться в разработке</p>
+        <a href="/" class="error-page__link">На главную</a>
     </div>
 </main>
