@@ -18,6 +18,7 @@
 
 .about__text a {
     color: #0097a7;
+    word-break: break-all;
 }
 
 .about__text a:hover {
@@ -31,4 +32,10 @@
     padding: 10px 40px;
     text-align: center;
     border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+    .about {
+        font-size: 1.2rem;
+    }
 }
