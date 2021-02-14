@@ -5,7 +5,7 @@ module.exports = function(config) {
 
 	config.setDataDeepMerge(true);
 
-  config.addPassthroughCopy("./src/images");
+  	config.addPassthroughCopy("./src/images");
 	config.addPassthroughCopy("./src/styles");
 	config.addPassthroughCopy("./src/scripts");
 	config.addPassthroughCopy("./src/fonts");
@@ -61,7 +61,7 @@ module.exports = function(config) {
 	config.setBrowserSyncConfig({
 		callbacks: {
 			ready: function(err, browserSync) {
-				const content_404 = fs.readFileSync('dist/404/index.html');
+				const content_404 = fs.readFileSync('dist/404.html');
 
 				browserSync.addMiddleware("*", (req, res) => {
 					res.write(content_404);
