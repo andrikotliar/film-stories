@@ -14,7 +14,9 @@ layout: page.njk
 permalink: /genres/{{ tag | slug }}/
 ---
 
-<main class="content container">
-    {% set articleslist = collections[tag] %}
-    {% include "cards.njk" %}
+<main class="content">
+    <div class="container">
+        {% set articleslist = collections[tag] %}
+        {% include "cards.njk" %}
+    </div>
 </main>

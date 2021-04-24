@@ -5,7 +5,9 @@ description: Библиотека статей о создании фильмо�
 permalink: /articles/
 ---
 
-<main class="content container">
-    {% set articleslist = collections.article %}
-    {% include "cards.njk" %}
+<main class="content">
+    <div class="container">
+    	{% set articleslist = collections.article %}
+    	{% include "cards.njk" %}
+    </div>
 </main>

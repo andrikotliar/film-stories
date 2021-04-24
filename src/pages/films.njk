@@ -5,7 +5,9 @@ description: Список коротких пересказов сюжетов �
 permalink: /films/
 ---
 
-<main class="content container">
-    {% set articleslist = collections.story %}
-    {% include "cards.njk" %}
+<main class="content">
+    <div class="container">
+    	{% set articleslist = collections.story %}
+    	{% include "cards.njk" %}
+    </div>
 </main>
