@@ -2,24 +2,26 @@
 layout: page.njk
 ---
 
-<main class="content container">
-  <article class="article">
-      <header class="article__header">
-        <h1 class="article__title"> {{title}} </h1>
-        {% if page.url != '/about/' %}
-          <time class="article__time" time="{{date | isoDate}}">{{date | articleDate}}</time>
-        {% endif %}
-        <div class="article__cover">
-        {% if page.url != '/about/' %}
-          <img src="images/cover.jpg" alt="{{title}}">
-        {% else %} 
-          <img src="/images/pages/about.jpg" alt="{{title}}"> 
-        {% endif %}
-        </div>
-      </header>
-    <section class="article__body">
-      {{ content | safe }}
-    </section>
-  </article>
-  {% include 'more-articles.njk' %}
+<main class="content">
+  <div class="container">
+    <article class="article">
+        <header class="article__header">
+          <h1 class="article__title"> {{title}} </h1>
+          {% if page.url != '/about/' %}
+            <time class="article__time" time="{{date | isoDate}}">{{date | articleDate}}</time>
+          {% endif %}
+          <div class="article__cover">
+          {% if page.url != '/about/' %}
+            <img src="images/cover.jpg" alt="{{title}}">
+          {% else %} 
+            <img src="/images/pages/about.jpg" alt="{{title}}"> 
+          {% endif %}
+          </div>
+        </header>
+      <section class="article__body">
+        {{ content | safe }}
+      </section>
+    </article>
+    {% include 'more-articles.njk' %}
+  </div>
 </main>
