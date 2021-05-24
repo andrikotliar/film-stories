@@ -1,13 +1,10 @@
 <div class="article__bottom">
+  {% set link = page.url | linkFilter %}
   <h6 class="article__bottom-title">
-    Другие {% if tags == "article" %}статьи{% else %}сюжеты{% endif %}:
+    Другие {% if link == "articles" %}статьи{% else %}сюжеты{% endif %}:
   </h6>
   <div class="article-links">
-    {% if tags[0] == "story" %}
-      {% set articleCollection = collections.story %}
-    {% else %}
-      {% set articleCollection = collections.article %}
-    {% endif %}
+    {% set articleCollection = collections[link] %}
 
     {% for article in articleCollection | reverse | head(5) %}
       {% if article.url != page.url %}
