@@ -5,7 +5,6 @@ module.exports = function(config) {
 
 	config.setDataDeepMerge(true);
 
-  	config.addPassthroughCopy("./src/images");
 	config.addPassthroughCopy("./src/styles");
 	config.addPassthroughCopy("./src/scripts");
 	config.addPassthroughCopy("./src/fonts");
@@ -34,6 +33,10 @@ module.exports = function(config) {
 		return array.slice(0, n);
 	});
 
+	config.addFilter("linkFilter", (url) => {
+		return url.split('/')[1];
+	});
+
 	config.addCollection('tagList', (collection) => {
 		const set = new Set();
 		for (const item of collection.getAllSorted()) {
@@ -49,6 +52,16 @@ module.exports = function(config) {
 		}
 		return [...set].sort();
 	});
+
+	// collections
+
+	config.addCollection('films', (collectionAPI) => {
+        return collectionAPI.getFilteredByGlob('src/films/*/*.md');
+    });
+
+	config.addCollection('articles', (collectionAPI) => {
+        return collectionAPI.getFilteredByGlob('src/articles/*/*.md');
+    });
 
 	let md = markdownIt({
 		html: true,
